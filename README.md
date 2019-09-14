@@ -16,7 +16,10 @@ Test scripts for GAN models
 		* Original code had an issue with loading the images from the images folder.  Somehow it is working but need to figure out the way the image storage/retrieval happens. 
 
 * *DrumDenoiserGAN.ipynb* Implementation of Deep Convolutional Generative Adversarial Network to denoise audio for drum replacement.
+	* COMPLETE - Update to import audio files
 	* **Next steps:** Move *Untitled0_v05f_detailsearch.ipynb* to *DrumDenoiserGAN.ipynb*.
+		* Image creator/saver needs work
+
 	
 * Potential steps:
 	* Run 2d image GAN successfully
