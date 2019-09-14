@@ -12,8 +12,9 @@ Test scripts for GAN models
   'Discrepancy between trainable weights and collected trainable'</code>.
 		* Note: this issue does not appear to mess up the output.
 	* **Next steps:** Unprocess/dummy down the code so a model object is returned.  
-	* Cleanup:
+		* *mnistgan_test_with_class.ipynb* is the original file that runs on a single command.* Cleanup:
 		* Original code had an issue with loading the images from the images folder.  Somehow it is working but need to figure out the way the image storage/retrieval happens. 
+	
 * Potential steps:
 	* Run 2d image GAN successfully
 	* Understand wtf is going on there
