@@ -20,8 +20,14 @@ Test scripts for GAN models
 	* COMPLETE - Move *Untitled0_v05f_detailsearch.ipynb* to *DrumDenoiserGAN.ipynb*.
 		* Image creator/saver needs work
 	* COMPLETE - Figure out how to adjust for latent_dim. Original process may be taking smaller images. If so, we may need to remove latent_dim.
-	* **Next steps: 
+	* **Next steps: **
 		* COMPLETE - Increase samples to 700
+		* **may be an issue with : x_train_noisy[0, :,0]*
+			 * Try using something like this with the : in the middle: <code>get_variance(x_train_noisy[0, :,0])
+			 ia = x_train_noisy[0, :,0]
+slide_array = np.append(0, ia[0:-1])
+output_array = ia - slide_array
+output_array.shape</code>
 		* If improvement, then further increase in samples?
 		* Additional sample increase?
 		* Adjust parameters
