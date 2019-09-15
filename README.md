@@ -20,6 +20,7 @@ Test scripts for GAN models
 	* COMPLETE - Move *Untitled0_v05f_detailsearch.ipynb* to *DrumDenoiserGAN.ipynb*.
 		* Image creator/saver needs work
 	* **Next steps: Figure out how to adjust for latent_dim**. Original process may be taking smaller images. If so, we may need to remove latent_dim.
+		* Also need to reuse periodic image generator, only for periodic audio generation
 
 	
 * Potential steps:
