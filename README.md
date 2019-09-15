@@ -17,8 +17,9 @@ Test scripts for GAN models
 
 * *DrumDenoiserGAN.ipynb* Implementation of Deep Convolutional Generative Adversarial Network to denoise audio for drum replacement.
 	* COMPLETE - Update to import audio files
-	* **Next steps:** Move *Untitled0_v05f_detailsearch.ipynb* to *DrumDenoiserGAN.ipynb*.
+	* COMPLETE - Move *Untitled0_v05f_detailsearch.ipynb* to *DrumDenoiserGAN.ipynb*.
 		* Image creator/saver needs work
+	* **Next steps: Figure out how to adjust for latent_dim**. Original process may be taking smaller images. If so, we may need to remove latent_dim.
 
 	
 * Potential steps:
