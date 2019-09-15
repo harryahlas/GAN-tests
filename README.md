@@ -19,7 +19,12 @@ Test scripts for GAN models
 	* COMPLETE - Update to import audio files
 	* COMPLETE - Move *Untitled0_v05f_detailsearch.ipynb* to *DrumDenoiserGAN.ipynb*.
 		* Image creator/saver needs work
-	* **Next steps: Figure out how to adjust for latent_dim**. Original process may be taking smaller images. If so, we may need to remove latent_dim.
+	* COMPLETE - Figure out how to adjust for latent_dim. Original process may be taking smaller images. If so, we may need to remove latent_dim.
+	* **Next steps: 
+		* COMPLETE - Increase samples to 700
+		* Additional sample increase?
+		* Adjust parameters
+			* Change Adam to .00001 and .8?
 		* Also need to reuse periodic image generator, only for periodic audio generation
 
 	
