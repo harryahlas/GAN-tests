@@ -29,6 +29,7 @@ slide_array = np.append(0, ia[0:-1])
 output_array = ia - slide_array
 output_array.shape</code>
 		* If still issues then look at structure of models and reevaluate. Maybe look at old cnn or lstm that worked better for ideas.
+			* Could be issue with reshape on generator
 		* If improvement, then further increase in samples?
 		* Additional sample increase?
 		* Adjust parameters
