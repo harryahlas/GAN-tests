@@ -20,7 +20,11 @@ Test scripts for GAN models
 	* COMPLETE - Move *Untitled0_v05f_detailsearch.ipynb* to *DrumDenoiserGAN.ipynb*.
 		* Image creator/saver needs work
 	* COMPLETE - Figure out how to adjust for latent_dim. Original process may be taking smaller images. If so, we may need to remove latent_dim.
-	* **Next steps: ** Look at spleeter...reg doesnt work, try jupyter notebook on colab
+	* COMPLETE -  Look at spleeter...reg doesnt work, try jupyter notebook on colab
+	##**Next steps: **spleeter
+	* look at https://github.com/deezer/spleeter/blob/master/configs/musdb_train.csv
+	* split files in that order, create blanks for other categories
+	* see documentation for training	
 	* **Next steps: ** UPDATE V2 TO INCLUDE CODE FROM OTHER GIT, FIGURE OUT ERROR
 		* COMPLETE - SEE IF SWITHCING CONV1D2 FROM 64 TO SOMETHING ELSE CHANGES THE GAPS!!
 		* Why is it only generating changes roughly every 64?
