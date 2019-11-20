@@ -1,0 +1,18 @@
+
+git clone https://github.com/Deezer/spleeter
+conda env create -f spleeter/conda/spleeter-cpu.yaml
+activate spleeter-cpu
+pip install museval
+pip install spleeter
+spleeter separate -i 156e-wVoxedit1.wav -p spleeter:2stems -o output  ### note that this needs to have no spaces in filename
+
+conda env create -f C:\Development\github\spleeter\conda\spleeter-cpu.yaml
+
+(older conda)
+activate <envname>
+
+
+conda activate spleeter-cpu
+spleeter separate -i spleeter/audio_example.mp3 -p spleeter:2stems -o output
+
+conda env create -f spleeter/conda/spleeter-cpu.yamlspleeter separate -i 156e-wVoxedit1.wav -p spleeter:2stems -o output
