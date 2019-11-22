@@ -73,12 +73,30 @@ drum_test_09 = read_whole("Audio\drum_test-09.wav")
 
 background_train_full = read_whole("Audio/background_train_full.wav")
 
-min_wav_seconds = 10
-max_wav_seconds = 30
+min_audio_file_seconds = 10
+max_audio_file_seconds = 30
 min_background_section_seconds = 3
 max_background_section_seconds = 10
 
-random.randint(0,9))
+# Length of current audio file
+current_audio_file_seconds = random.randint(min_audio_file_seconds, max_audio_file_seconds)
+
+    
+# Create background noise. Append to noise until length of current_audio_file_seconds is met    
+background_section_start = 0 #samples, not seconds
+####start here
+background_section_seconds = random.randint(min_background_section_seconds, max_background_section_seconds)
+ 
+background_section_audio = random.randint(background_section_start, background_section_seconds * 44100)
+    
+select random amount of time between 3-10 seconds of background noise
+				* if less than total time then find another random amount and add
+				* repeat until time limit exceeded.    
+    
+
+
+
+
 
 
 
