@@ -81,20 +81,35 @@ max_background_section_seconds = 10
 
 # Length of current audio file
 current_audio_file_seconds = random.randint(min_audio_file_seconds, max_audio_file_seconds)
+current_audio_file_samples = current_audio_file_seconds * 44100
 
-current_audio_file_background = []   
 
 # Create background noise. Append to noise until length of current_audio_file_seconds is met    
+current_audio_file_background = []   
 background_section_start = 0 #samples, not seconds
-create_background_section_continue_flag = True
+#create_background_section_continue_flag = True
 #loop
-# while create_background_section_continue_flag = True
-background_section_seconds = random.randint(min_background_section_seconds, max_background_section_seconds)
- 
-background_section_end = background_section_start + (background_section_seconds * 44100) 
 
-current_audio_file_background.extend(background_train_full[background_section_start:background_section_end])
-background_section_start = background_section_end + 1
+# go through while loop until background audio is long enough
+while len(current_audio_file_background) <= current_audio_file_samples:
+    
+    # select length of this section
+    background_section_seconds = random.randint(min_background_section_seconds, max_background_section_seconds)
+    background_section_samples = background_section_seconds * 44100
+    
+    # start point of background platter to choose from
+    background_platter_start = random.randint(0, len(background_train_full) - background_section_samples)
+    # end point of background platter to choose from
+    background_platter_end = background_platter_start + background_section_samples
+    
+    # end point
+    background_section_end = background_section_start + background_section_samples 
+    current_audio_file_background.extend(background_train_full[background_platter_start:background_platter_end])
+    background_section_start = background_section_end + 1
+
+# Trim to appropriate length
+current_audio_file_background = current_audio_file_background[0:current_audio_file_samples]
+
 # if len(current_audio_file_background) >= current_audio_file_seconds * 44100 then 
 # subset it and take only the seconds that are needed
 # create_background_section_continue_flag = False
