@@ -58,6 +58,19 @@ drum_train_30 = read_whole("Audio\drum_train-30.wav")
 drum_train_31 = read_whole("Audio\drum_train-31.wav")
 drum_train_32 = read_whole("Audio\drum_train-32.wav")
 '''
+
+drum_test_01 = read_whole("Audio\drum_test-01.wav")
+drum_test_02 = read_whole("Audio\drum_test-02.wav")
+drum_test_03 = read_whole("Audio\drum_test-03.wav")
+drum_test_04 = read_whole("Audio\drum_test-04.wav")
+drum_test_05 = read_whole("Audio\drum_test-05.wav")
+drum_test_06 = read_whole("Audio\drum_test-06.wav")
+drum_test_07 = read_whole("Audio\drum_test-07.wav")
+drum_test_08 = read_whole("Audio\drum_test-08.wav")
+drum_test_09 = read_whole("Audio\drum_test-09.wav")
+
+
+background_train_full = read_whole("Audio\background_train_full.wav")
 # waverdwave.py
 import numpy as np
 from numpy import array
