@@ -24,6 +24,9 @@ Test scripts for GAN models
 	##**Next steps: **spleeter
 	* look at https://github.com/deezer/spleeter/blob/master/configs/musdb_train.csv
 	* split files in that order, create blanks for other categories
+	* create train csv
+	* run train session
+	* evaluate results
 	* see documentation for training	
 	* **Next steps: ** UPDATE V2 TO INCLUDE CODE FROM OTHER GIT, FIGURE OUT ERROR
 		* COMPLETE - SEE IF SWITHCING CONV1D2 FROM 64 TO SOMETHING ELSE CHANGES THE GAPS!!
