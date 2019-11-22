@@ -10,6 +10,7 @@ import os
 import wave
 import struct
 import random
+import numpy as np
 
 os.chdir("C:\\Development\\github\\GAN-tests")
 
@@ -81,13 +82,24 @@ max_background_section_seconds = 10
 # Length of current audio file
 current_audio_file_seconds = random.randint(min_audio_file_seconds, max_audio_file_seconds)
 
-    
+current_audio_file_background = []   
+
 # Create background noise. Append to noise until length of current_audio_file_seconds is met    
 background_section_start = 0 #samples, not seconds
-####start here
+create_background_section_continue_flag = True
+#loop
+# while create_background_section_continue_flag = True
 background_section_seconds = random.randint(min_background_section_seconds, max_background_section_seconds)
  
-background_section_audio = random.randint(background_section_start, background_section_seconds * 44100)
+background_section_end = background_section_start + (background_section_seconds * 44100) 
+
+current_audio_file_background.extend(background_train_full[background_section_start:background_section_end])
+background_section_start = background_section_end + 1
+# if len(current_audio_file_background) >= current_audio_file_seconds * 44100 then 
+# subset it and take only the seconds that are needed
+# create_background_section_continue_flag = False
+
+# end loop
     
 select random amount of time between 3-10 seconds of background noise
 				* if less than total time then find another random amount and add
@@ -101,7 +113,7 @@ select random amount of time between 3-10 seconds of background noise
 
 
 # waverdwave.py
-import numpy as np
+
 from numpy import array
 import matplotlib.pyplot as plt
 from random import randint
