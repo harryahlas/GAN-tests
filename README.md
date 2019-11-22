@@ -31,7 +31,7 @@ Test scripts for GAN models
 			test is through 9, train is through 7
 			* COMPLETE - add to github
 		* get list of background noise
-				* COMPLETE - COMPLETE - C:\Development\Python\encoder_decoder\encoder_decoder_sounds\Audio\background_train_full.wav
+				* COMPLETE - C:\Development\Python\encoder_decoder\encoder_decoder_sounds\Audio\background_train_full.wav
 				* add to github		
 			* figure out how to cut up background and crossfade
 			* if simple enough then add to code below
