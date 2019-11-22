@@ -32,15 +32,15 @@ Test scripts for GAN models
 			* COMPLETE - add to github
 		* get list of background noise
 				* COMPLETE - C:\Development\Python\encoder_decoder\encoder_decoder_sounds\Audio\background_train_full.wav
-				* add to github		
+				* COMPLETE - add to github		
 			* figure out how to cut up background and crossfade
 			* if simple enough then add to code below
 		* process
-			* pick random amount of time, between 10, 30 seconds
-			* create background noise for time period
-				* select random amount of time between 3-10 seconds of background noise
-				* if less than total time then find another random amount and add
-				* repeat until time limit exceeded.
+			* COMPLETE - pick random amount of time, between 10, 30 seconds
+			* COMPLETE - create background noise for time period
+				* COMPLETE - select random amount of time between 3-10 seconds of background noise
+				* COMPLETE - if less than total time then find another random amount and add
+				* COMPLETE - repeat until time limit exceeded.
 				* save as sample000n_other.wav
 			* pick random time between 2, 8 seconds
 				* pick random train sample
