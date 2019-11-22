@@ -24,6 +24,14 @@ Test scripts for GAN models
 	##**Next steps: **spleeter
 	* look at https://github.com/deezer/spleeter/blob/master/configs/musdb_train.csv
 	* split files in that order, create blanks for other categories
+		* get list of train, test, and validation samples
+		* tom samples
+		* get list of background noise
+		* figure out how to cut up background and crossfade
+		* process
+			* pick random amount of time, between 10, 30 seconds
+			* create background noise for time period
+				* select random amount of time between 3-10 seconds of background noise
 	* create train csv
 	* run train session
 	* evaluate results
