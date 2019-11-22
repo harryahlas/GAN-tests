@@ -28,10 +28,23 @@ Test scripts for GAN models
 		* tom samples
 		* get list of background noise
 		* figure out how to cut up background and crossfade
+			* if simple enough then add to code below
 		* process
 			* pick random amount of time, between 10, 30 seconds
 			* create background noise for time period
 				* select random amount of time between 3-10 seconds of background noise
+				* if less than total time then find another random amount and add
+				* repeat until time limit exceeded.
+				* save as sample000n_other.wav
+			* pick random time between 2, 8 seconds
+				* pick random train sample
+				* add 0 values for that amount of time prior to sample
+				* repeat process.
+				* if new amount of time plus the previous sample(s) is < 2 seconds before end time then add blank space till end of time limit
+				* otherwise repeat and append
+				* save as sample000n_drums.wav
+			* combine files
+			* save as sample000n_mixture.wav
 	* create train csv
 	* run train session
 	* evaluate results
