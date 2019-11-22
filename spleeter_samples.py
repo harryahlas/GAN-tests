@@ -11,6 +11,7 @@ import wave
 import struct
 import random
 import numpy as np
+from numpy import array
 
 os.chdir("C:\\Development\\github\\GAN-tests")
 
@@ -79,6 +80,10 @@ max_audio_file_seconds = 30
 min_background_section_seconds = 3
 max_background_section_seconds = 10
 
+
+audio_file_number = 1
+audio_file_number_text = "{:04d}".format(audio_file_number)
+
 # Length of current audio file
 current_audio_file_seconds = random.randint(min_audio_file_seconds, max_audio_file_seconds)
 current_audio_file_samples = current_audio_file_seconds * 44100
@@ -89,6 +94,7 @@ current_audio_file_background = []
 background_section_start = 0 #samples, not seconds
 #create_background_section_continue_flag = True
 #loop
+
 
 # go through while loop until background audio is long enough
 while len(current_audio_file_background) <= current_audio_file_samples:
@@ -110,6 +116,25 @@ while len(current_audio_file_background) <= current_audio_file_samples:
 # Trim to appropriate length
 current_audio_file_background = current_audio_file_background[0:current_audio_file_samples]
 
+
+
+
+sound_output=wave.open(("audio_files_split/audio_file_background_" + audio_file_number_text + ".wav"),'w')
+sound_output.setparams((1, 2, 44100, 0, 'NONE', 'not compressed')) # was 1,2... but used get_params for this file
+f = (array(current_audio_file_background))
+f = f.astype('int16')
+f = f.reshape(current_audio_file_samples)#100000)
+for i in range(0, len(f)):
+        value = f[i]
+        packed_value = struct.pack('h', value)
+        sound_output.writeframes(packed_value)
+sound_output.close()
+
+
+# to get parameters
+wav_r = wave.open("Audio/background_train_full.wav", 'r')
+wav_r.getparams()
+
 # if len(current_audio_file_background) >= current_audio_file_seconds * 44100 then 
 # subset it and take only the seconds that are needed
 # create_background_section_continue_flag = False
@@ -129,7 +154,6 @@ select random amount of time between 3-10 seconds of background noise
 
 # waverdwave.py
 
-from numpy import array
 import matplotlib.pyplot as plt
 from random import randint
 import keras
