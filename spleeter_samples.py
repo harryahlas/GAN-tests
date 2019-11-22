@@ -9,6 +9,7 @@ Created on Fri Aug 31 18:51:03 2018
 import os
 import wave
 import struct
+import random
 
 os.chdir("C:\\Development\\github\\GAN-tests")
 
@@ -70,7 +71,17 @@ drum_test_08 = read_whole("Audio\drum_test-08.wav")
 drum_test_09 = read_whole("Audio\drum_test-09.wav")
 
 
-background_train_full = read_whole("Audio\background_train_full.wav")
+background_train_full = read_whole("Audio/background_train_full.wav")
+
+min_wav_seconds = 10
+max_wav_seconds = 30
+min_background_section_seconds = 3
+max_background_section_seconds = 10
+
+random.randint(0,9))
+
+
+
 # waverdwave.py
 import numpy as np
 from numpy import array
