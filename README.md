@@ -23,14 +23,15 @@ Test scripts for GAN models
 	* COMPLETE -  Look at spleeter...reg doesnt work, try jupyter notebook on colab
 	##**Next steps: **spleeter
 	* look at https://github.com/deezer/spleeter/blob/master/configs/musdb_train.csv
+	* use C:\Development\Python\encoder_decoder\conv_decoder_with_real_samples.py as template
 	* split files in that order, create blanks for other categories
 		* get list of train, test, and validation samples
-		* tom samples
-			* C:\Development\Python\encoder_decoder\encoder_decoder_sounds\Audio\drum_sample-14.wav (01 through 32)
+		* COMPLETE - tom samples
+			* COMPLETE - C:\Development\Python\encoder_decoder\encoder_decoder_sounds\Audio\drum_sample-14.wav (01 through 32)
 			test is through 9, train is through 7
-			* add to github
+			* COMPLETE - add to github
 		* get list of background noise
-				* C:\Development\Python\encoder_decoder\encoder_decoder_sounds\Audio\background_train_full.wav
+				* COMPLETE - COMPLETE - C:\Development\Python\encoder_decoder\encoder_decoder_sounds\Audio\background_train_full.wav
 				* add to github		
 			* figure out how to cut up background and crossfade
 			* if simple enough then add to code below
