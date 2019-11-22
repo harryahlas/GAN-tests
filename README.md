@@ -26,8 +26,13 @@ Test scripts for GAN models
 	* split files in that order, create blanks for other categories
 		* get list of train, test, and validation samples
 		* tom samples
+			* C:\Development\Python\encoder_decoder\encoder_decoder_sounds\Audio\drum_sample-14.wav (01 through 32)
+			test is through 9, train is through 7
+			* add to github
 		* get list of background noise
-		* figure out how to cut up background and crossfade
+				* C:\Development\Python\encoder_decoder\encoder_decoder_sounds\Audio\background_train_full.wav
+				* add to github		
+			* figure out how to cut up background and crossfade
 			* if simple enough then add to code below
 		* process
 			* pick random amount of time, between 10, 30 seconds
