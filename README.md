@@ -21,6 +21,7 @@ Test scripts for GAN models
 		* Image creator/saver needs work
 	* COMPLETE - Figure out how to adjust for latent_dim. Original process may be taking smaller images. If so, we may need to remove latent_dim.
 	* COMPLETE -  Look at spleeter...reg doesnt work, try jupyter notebook on colab
+	##**Next steps: **musdb
 	##**Next steps: **spleeter
 	* look at https://github.com/deezer/spleeter/blob/master/configs/musdb_train.csv
 	* use C:\Development\Python\encoder_decoder\conv_decoder_with_real_samples.py as template

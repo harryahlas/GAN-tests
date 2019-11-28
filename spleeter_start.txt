@@ -16,3 +16,8 @@ conda activate spleeter-cpu
 spleeter separate -i spleeter/audio_example.mp3 -p spleeter:2stems -o output
 
 conda env create -f spleeter/conda/spleeter-cpu.yamlspleeter separate -i 156e-wVoxedit1.wav -p spleeter:2stems -o output
+
+### demucs start
+pip install musdb
+cd C:\Development\github\demucs
+conda env update -f environment-cpu.yml
