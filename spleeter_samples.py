@@ -209,20 +209,11 @@ while len(current_audio_file_hits) + train_list_maxlength  <= current_audio_file
 # Trim to appropriate length
 current_audio_file_hits = current_audio_file_hits[0:current_audio_file_samples]
 
-
+# Print hits
 sound_output=wave.open(("audio_files_split/audio_file_hits_" + audio_file_number_text + ".wav"),'w')
 sound_output.setparams((1, 2, 44100, 0, 'NONE', 'not compressed')) # was 1,2... but used get_params for this file
-#f = (array(current_audio_file_background))
-#f = f.astype('int16')
-#f = f.reshape(current_audio_file_samples)#100000)
-###NEED TO GET G TO LOOK LIKE F <<<------------------------------------
-#current_audio_file_hitsx = [(x,) for x in current_audio_file_hits]    
-#current_audio_file_hitsx = current_audio_file_hitsx.astype(int)
 
 f = (array(current_audio_file_hits))
-
-#g = array(g)
-#g = g.astype(str).astype(int)
 f = f.astype('int16')
 f = f.reshape(current_audio_file_samples)#100000)
     
@@ -232,8 +223,7 @@ for i in range(0, len(f)):
         sound_output.writeframes(packed_value)
 sound_output.close()
 
-    
-    # select length of this section
+# Next - combine files to 3rd output
 
 
 
