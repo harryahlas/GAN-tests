@@ -170,10 +170,40 @@ wav_r.getparams()
 #select random amount of time between 3-10 seconds of background noise
 #				* if less than total time then find another random amount and add
 #				* repeat until time limit exceeded.    
+
+
+
+# Create hits only audio. Add until length of current_audio_file_seconds is met    
+current_audio_file_hits = []   
+hits_section_start = 0 #samples, not seconds
+
+
+# go through while loop until hits audio is long enough
+while len(current_audio_file_hits) <= current_audio_file_samples:
     
     # select length of this section
-empty_section_seconds = random.randint(min_empty_section_seconds * 100, max_empty_section_seconds * 100) / 100
-empty_section_samples = background_section_seconds * 44100
+    empty_section_seconds = random.randint(min_empty_section_seconds * 100, max_empty_section_seconds * 100) / 100
+    empty_section_samples = background_section_seconds * 44100
+
+    ## start point of background platter to choose from
+    #background_platter_start = random.randint(0, len(background_train_full) - background_section_samples)
+    ## end point of background platter to choose from
+    #background_platter_end = background_platter_start + background_section_samples
+    
+    # end point
+    hits_section_end = background_section_start + background_section_samples 
+    current_audio_file_background.extend(background_train_full[background_platter_start:background_platter_end])
+    background_section_start = background_section_end + 1
+
+# Trim to appropriate length
+current_audio_file_background = current_audio_file_background[0:current_audio_file_samples]
+
+
+    
+    # select length of this section
+
+
+
 
 # select random sample
 random_sample = random.choice(train_list)
