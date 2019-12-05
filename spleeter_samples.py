@@ -209,6 +209,17 @@ while len(current_audio_file_hits) + train_list_maxlength  <= current_audio_file
 current_audio_file_hits = current_audio_file_hits[0:current_audio_file_samples]
 
 
+sound_output=wave.open(("audio_files_split/audio_file_hits_" + audio_file_number_text + ".wav"),'w')
+sound_output.setparams((1, 2, 44100, 0, 'NONE', 'not compressed')) # was 1,2... but used get_params for this file
+f = (array(current_audio_file_background))
+f = f.astype('int16')
+f = f.reshape(current_audio_file_samples)#100000)
+for i in range(0, len(f)):
+        value = f[i]
+        packed_value = struct.pack('h', value)
+        sound_output.writeframes(packed_value)
+sound_output.close()
+
     
     # select length of this section
 
