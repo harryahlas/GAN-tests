@@ -75,10 +75,12 @@ drum_test_09 = read_whole("Audio\drum_test-09.wav")
 
 background_train_full = read_whole("Audio/background_train_full.wav")
 
+# Input min and max lengths of audio sizes for sample generation
 min_audio_file_seconds = 10
 max_audio_file_seconds = 30
 min_background_section_seconds = 3
 max_background_section_seconds = 10
+
 
 
 audio_file_number = 1
