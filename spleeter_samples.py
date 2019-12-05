@@ -26,7 +26,7 @@ def read_whole(filename):
         ret.append(decoded)
     return ret
 
-
+# Import training samples
 drum_train_01 = read_whole("Audio\drum_train-01.wav")
 drum_train_02 = read_whole("Audio\drum_train-02.wav")
 drum_train_03 = read_whole("Audio\drum_train-03.wav")
