@@ -214,6 +214,12 @@ sound_output.setparams((1, 2, 44100, 0, 'NONE', 'not compressed')) # was 1,2... 
 f = (array(current_audio_file_background))
 f = f.astype('int16')
 f = f.reshape(current_audio_file_samples)#100000)
+###NEED TO GET G TO LOOK LIKE F <<<------------------------------------
+g = [(x,) for x in current_audio_file_hits]    
+g = array(g)
+g = g.astype('int16')
+g = g.reshape(current_audio_file_samples)#100000)
+    
 for i in range(0, len(f)):
         value = f[i]
         packed_value = struct.pack('h', value)
@@ -222,6 +228,15 @@ sound_output.close()
 
     
     # select length of this section
+
+
+
+
+
+
+
+
+
 
 
 
