@@ -80,13 +80,14 @@ train_list = [drum_train_01,
               drum_train_05,
               drum_train_06,
               drum_train_07]
-test_list = [drum_test_01,
+test_list = [drum_test_01,########3fix this
               drum_test_02,
               drum_test_03,
               drum_test_04,
               drum_test_05,
               drum_test_06,
-              drum_test_07]
+              drum_test_07,
+              xxxx]
 background_train_full = read_whole("Audio/background_train_full.wav")
 
 # Input min and max lengths of audio sizes for sample generation
@@ -172,7 +173,7 @@ empty_section_samples = background_section_seconds * 44100
 # select random sample
 random_sample =
 
-
+use test_list  and train_list 
 
 
 
