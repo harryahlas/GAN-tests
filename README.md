@@ -32,12 +32,12 @@ Test scripts for GAN models
 			* COMPLETE - C:\Development\Python\encoder_decoder\encoder_decoder_sounds\Audio\drum_sample-14.wav (01 through 32)
 			test is through 9, train is through 7
 			* COMPLETE - add to github
-		* get list of background noise
+		* COMPLETE - get list of background noise
 				* COMPLETE - C:\Development\Python\encoder_decoder\encoder_decoder_sounds\Audio\background_train_full.wav
 				* COMPLETE - add to github		
 			* figure out how to cut up background and crossfade
 			* if simple enough then add to code below
-		* process
+		* COMPLETE - process
 			* COMPLETE - pick random amount of time, between 10, 30 seconds
 			* COMPLETE - create background noise for time period
 				* COMPLETE - select random amount of time between 3-10 seconds of background noise
@@ -51,10 +51,9 @@ Test scripts for GAN models
 				* COMPLETE -if new amount of time plus the previous sample(s) is < 2 seconds before end time then add blank space till end of time limit
 				* COMPLETE -otherwise repeat and append
 				* COMPLETE -save as sample000n_drums.wav
-			* START HERE: Next - combine files to 3rd output combine files (226)
-			* Combine
-			* save as sample000n_mixture.wav
-		* create multiple samples
+			* COMPLETE - Combine
+			* COMPLETE - save as sample000n_mixture.wav
+		* create multiple samples using loop
 	* create train csv
 	* run train session
 	* evaluate results
