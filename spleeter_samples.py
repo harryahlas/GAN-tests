@@ -73,6 +73,20 @@ drum_test_08 = read_whole("Audio\drum_test-08.wav")
 drum_test_09 = read_whole("Audio\drum_test-09.wav")
 
 
+train_list = [drum_train_01,
+              drum_train_02,
+              drum_train_03,
+              drum_train_04,
+              drum_train_05,
+              drum_train_06,
+              drum_train_07]
+test_list = [drum_test_01,
+              drum_test_02,
+              drum_test_03,
+              drum_test_04,
+              drum_test_05,
+              drum_test_06,
+              drum_test_07]
 background_train_full = read_whole("Audio/background_train_full.wav")
 
 # Input min and max lengths of audio sizes for sample generation
@@ -80,6 +94,8 @@ min_audio_file_seconds = 10
 max_audio_file_seconds = 30
 min_background_section_seconds = 3
 max_background_section_seconds = 10
+min_empty_section_seconds = 0
+max_empty_section_seconds = 10
 
 
 
@@ -133,7 +149,7 @@ for i in range(0, len(f)):
 sound_output.close()
 
 
-# to get parameters
+# to get parameters #notused
 wav_r = wave.open("Audio/background_train_full.wav", 'r')
 wav_r.getparams()
 
@@ -143,12 +159,18 @@ wav_r.getparams()
 
 # end loop
     
-select random amount of time between 3-10 seconds of background noise
-				* if less than total time then find another random amount and add
-				* repeat until time limit exceeded.    
+
+############new section
+#select random amount of time between 3-10 seconds of background noise
+#				* if less than total time then find another random amount and add
+#				* repeat until time limit exceeded.    
     
+    # select length of this section
+empty_section_seconds = random.randint(min_empty_section_seconds * 100, max_empty_section_seconds * 100) / 100
+empty_section_samples = background_section_seconds * 44100
 
-
+# select random sample
+random_sample =
 
 
 
