@@ -13,6 +13,8 @@ import random
 import numpy as np
 from numpy import array
 
+import matplotlib.pyplot as plt
+
 os.chdir("C:\\Development\\github\\GAN-tests")
 
 wrd=wave.open("C:\Development\Python\encoder_decoder\encoder_decoder_sounds\Audio\drum_train-06.wav","r")
@@ -80,14 +82,17 @@ train_list = [drum_train_01,
               drum_train_05,
               drum_train_06,
               drum_train_07]
-test_list = [drum_test_01,########3fix this
+
+test_list = [ drum_test_01,
               drum_test_02,
               drum_test_03,
               drum_test_04,
               drum_test_05,
               drum_test_06,
               drum_test_07,
-              xxxx]
+              drum_test_08,
+              drum_test_09]
+
 background_train_full = read_whole("Audio/background_train_full.wav")
 
 # Input min and max lengths of audio sizes for sample generation
@@ -171,7 +176,7 @@ empty_section_seconds = random.randint(min_empty_section_seconds * 100, max_empt
 empty_section_samples = background_section_seconds * 44100
 
 # select random sample
-random_sample =
+random_sample = random.choice(train_list)
 
 use test_list  and train_list 
 
