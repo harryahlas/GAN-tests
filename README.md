@@ -43,15 +43,16 @@ Test scripts for GAN models
 				* COMPLETE - select random amount of time between 3-10 seconds of background noise
 				* COMPLETE - if less than total time then find another random amount and add
 				* COMPLETE - repeat until time limit exceeded.
-				* save as sample000n_other.wav
-			* pick random time between 2, 8 seconds START ON !!!! audio_file_hits_0001.wav not working for some reason
-				* pick random train sample
-				* add 0 values for that amount of time prior to sample
-				* repeat process.
-				* if new amount of time plus the previous sample(s) is < 2 seconds before end time then add blank space till end of time limit
-				* otherwise repeat and append
-				* save as sample000n_drums.wav
-			* combine files
+				* COMPLETE - save as sample000n_other.wav
+			* COMPLETE - pick random time between 0, 10 seconds 
+				* COMPLETE -pick random train sample
+				* COMPLETE -add 0 values for that amount of time prior to sample
+				* COMPLETE -repeat process.
+				* COMPLETE -if new amount of time plus the previous sample(s) is < 2 seconds before end time then add blank space till end of time limit
+				* COMPLETE -otherwise repeat and append
+				* COMPLETE -save as sample000n_drums.wav
+			* START HERE: Next - combine files to 3rd output combine files (226)
+			* Combine
 			* save as sample000n_mixture.wav
 	* create train csv
 	* run train session
