@@ -44,7 +44,7 @@ Test scripts for GAN models
 				* COMPLETE - if less than total time then find another random amount and add
 				* COMPLETE - repeat until time limit exceeded.
 				* save as sample000n_other.wav
-			* pick random time between 2, 8 seconds
+			* pick random time between 2, 8 seconds START ON !!NEED TO GET G TO LOOK LIKE F 
 				* pick random train sample
 				* add 0 values for that amount of time prior to sample
 				* repeat process.
