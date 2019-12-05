@@ -83,6 +83,9 @@ train_list = [drum_train_01,
               drum_train_06,
               drum_train_07]
 
+# Length of biggest training sample
+train_list_maxlength = len(max(train_list, key = len))
+
 test_list = [ drum_test_01,
               drum_test_02,
               drum_test_03,
@@ -175,15 +178,22 @@ wav_r.getparams()
 
 # Create hits only audio. Add until length of current_audio_file_seconds is met    
 current_audio_file_hits = []   
-hits_section_start = 0 #samples, not seconds
+#hits_section_start = 0 #samples, not seconds
 
-
-# go through while loop until hits audio is long enough
-while len(current_audio_file_hits) <= current_audio_file_samples:
+# Start with empty section
+empty_section_seconds = random.randint(min_empty_section_seconds * 100, max_empty_section_seconds * 100) / 100
+empty_section_samples = [0] * int(empty_section_seconds * 44100)
+current_audio_file_hits.extend(empty_section_samples)
+    
+# go through while loop until hits audio plus the length of the longest sample is less than the desired length
+while len(current_audio_file_hits + train_list_maxlength ) <= current_audio_file_samples:
+    
+    # Create random hit sample
+    random_sample = random.choice(train_list)
     
     # select length of this section
     empty_section_seconds = random.randint(min_empty_section_seconds * 100, max_empty_section_seconds * 100) / 100
-    empty_section_samples = background_section_seconds * 44100
+    empty_section_samples = [0] * int(empty_section_seconds * 44100)
 
     ## start point of background platter to choose from
     #background_platter_start = random.randint(0, len(background_train_full) - background_section_samples)
@@ -192,8 +202,8 @@ while len(current_audio_file_hits) <= current_audio_file_samples:
     
     # end point
     hits_section_end = background_section_start + background_section_samples 
-    current_audio_file_background.extend(background_train_full[background_platter_start:background_platter_end])
-    background_section_start = background_section_end + 1
+    current_audio_file_hits.extend(random_sample + empty_section_samples)
+    #background_section_start = background_section_end + 1
 
 # Trim to appropriate length
 current_audio_file_background = current_audio_file_background[0:current_audio_file_samples]
