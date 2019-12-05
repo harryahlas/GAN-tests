@@ -209,7 +209,7 @@ while len(current_audio_file_hits) + train_list_maxlength  <= current_audio_file
 # Trim to appropriate length
 current_audio_file_hits = current_audio_file_hits[0:current_audio_file_samples]
 
-# Print hits
+# Print hits (drums)
 sound_output=wave.open(("audio_files_split/audio_file_hits_" + audio_file_number_text + ".wav"),'w')
 sound_output.setparams((1, 2, 44100, 0, 'NONE', 'not compressed')) # was 1,2... but used get_params for this file
 
