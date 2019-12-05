@@ -107,137 +107,141 @@ min_empty_section_seconds = 0
 max_empty_section_seconds = 10
 
 
+number_of_audio_files = 5
 
-audio_file_number = 1
-audio_file_number_text = "{:04d}".format(audio_file_number)
+# Start loop
 
-# Length of current audio file
-current_audio_file_seconds = random.randint(min_audio_file_seconds, max_audio_file_seconds)
-current_audio_file_samples = current_audio_file_seconds * 44100
-
-
-# Create background noise. Append to noise until length of current_audio_file_seconds is met    
-current_audio_file_background = []   
-background_section_start = 0 #samples, not seconds
-#create_background_section_continue_flag = True
-#loop
-
-
-# go through while loop until background audio is long enough
-while len(current_audio_file_background) <= current_audio_file_samples:
+for loop_number in range(1, number_of_audio_files):
+    print(loop_number)
+    audio_file_number = loop_number
+    audio_file_number_text = "{:04d}".format(audio_file_number)
     
-    # select length of this section
-    background_section_seconds = random.randint(min_background_section_seconds, max_background_section_seconds)
-    background_section_samples = background_section_seconds * 44100
+    # Length of current audio file
+    current_audio_file_seconds = random.randint(min_audio_file_seconds, max_audio_file_seconds)
+    current_audio_file_samples = current_audio_file_seconds * 44100
     
-    # start point of background platter to choose from
-    background_platter_start = random.randint(0, len(background_train_full) - background_section_samples)
-    # end point of background platter to choose from
-    background_platter_end = background_platter_start + background_section_samples
     
-    # end point
-    background_section_end = background_section_start + background_section_samples 
-    current_audio_file_background.extend(background_train_full[background_platter_start:background_platter_end])
-    background_section_start = background_section_end + 1
-
-# Trim to appropriate length
-current_audio_file_background = current_audio_file_background[0:current_audio_file_samples]
-
-
-
-
-sound_output=wave.open(("audio_files_split/audio_file_background_" + audio_file_number_text + ".wav"),'w')
-sound_output.setparams((1, 2, 44100, 0, 'NONE', 'not compressed')) # was 1,2... but used get_params for this file
-f = (array(current_audio_file_background))
-f = f.astype('int16')
-f = f.reshape(current_audio_file_samples)#100000)
-for i in range(0, len(f)):
-        value = f[i]
-        packed_value = struct.pack('h', value)
-        sound_output.writeframes(packed_value)
-sound_output.close()
-
-
-# to get parameters #notused
-wav_r = wave.open("Audio/background_train_full.wav", 'r')
-wav_r.getparams()
-
-# if len(current_audio_file_background) >= current_audio_file_seconds * 44100 then 
-# subset it and take only the seconds that are needed
-# create_background_section_continue_flag = False
-
-# end loop
+    # Create background noise. Append to noise until length of current_audio_file_seconds is met    
+    current_audio_file_background = []   
+    background_section_start = 0 #samples, not seconds
+    #create_background_section_continue_flag = True
+    #loop
     
-
-############new section
-#select random amount of time between 3-10 seconds of background noise
-#				* if less than total time then find another random amount and add
-#				* repeat until time limit exceeded.    
-
-
-
-# Create hits only audio. Add until length of current_audio_file_seconds is met    
-current_audio_file_hits = []   
-#hits_section_start = 0 #samples, not seconds
-
-# Start with empty section
-empty_section_seconds = random.randint(min_empty_section_seconds * 100, max_empty_section_seconds * 100) / 100
-empty_section_samples = [0] * int(empty_section_seconds * 44100)
-current_audio_file_hits.extend(empty_section_samples)
     
-# go through while loop until hits audio plus the length of the longest sample is less than the desired length
-while len(current_audio_file_hits) + train_list_maxlength  <= current_audio_file_samples:
+    # go through while loop until background audio is long enough
+    while len(current_audio_file_background) <= current_audio_file_samples:
+        
+        # select length of this section
+        background_section_seconds = random.randint(min_background_section_seconds, max_background_section_seconds)
+        background_section_samples = background_section_seconds * 44100
+        
+        # start point of background platter to choose from
+        background_platter_start = random.randint(0, len(background_train_full) - background_section_samples)
+        # end point of background platter to choose from
+        background_platter_end = background_platter_start + background_section_samples
+        
+        # end point
+        background_section_end = background_section_start + background_section_samples 
+        current_audio_file_background.extend(background_train_full[background_platter_start:background_platter_end])
+        background_section_start = background_section_end + 1
     
-    # Create random hit sample
-    random_sample = random.choice(train_list)
-    random_sample = [i[0] for i in random_sample]
+    # Trim to appropriate length
+    current_audio_file_background = current_audio_file_background[0:current_audio_file_samples]
     
-    # select length of this section
+    
+    
+    
+    sound_output=wave.open(("audio_files_split/audio_file_background_" + audio_file_number_text + ".wav"),'w')
+    sound_output.setparams((1, 2, 44100, 0, 'NONE', 'not compressed')) # was 1,2... but used get_params for this file
+    f = (array(current_audio_file_background))
+    f = f.astype('int16')
+    f = f.reshape(current_audio_file_samples)#100000)
+    for i in range(0, len(f)):
+            value = f[i]
+            packed_value = struct.pack('h', value)
+            sound_output.writeframes(packed_value)
+    sound_output.close()
+    
+    
+    # to get parameters #notused
+    wav_r = wave.open("Audio/background_train_full.wav", 'r')
+    wav_r.getparams()
+    
+    # if len(current_audio_file_background) >= current_audio_file_seconds * 44100 then 
+    # subset it and take only the seconds that are needed
+    # create_background_section_continue_flag = False
+    
+    # end loop
+        
+    
+    ############new section
+    #select random amount of time between 3-10 seconds of background noise
+    #				* if less than total time then find another random amount and add
+    #				* repeat until time limit exceeded.    
+    
+    
+    
+    # Create hits only audio. Add until length of current_audio_file_seconds is met    
+    current_audio_file_hits = []   
+    #hits_section_start = 0 #samples, not seconds
+    
+    # Start with empty section
     empty_section_seconds = random.randint(min_empty_section_seconds * 100, max_empty_section_seconds * 100) / 100
     empty_section_samples = [0] * int(empty_section_seconds * 44100)
-
-    ## start point of background platter to choose from
-    #background_platter_start = random.randint(0, len(background_train_full) - background_section_samples)
-    ## end point of background platter to choose from
-    #background_platter_end = background_platter_start + background_section_samples
+    current_audio_file_hits.extend(empty_section_samples)
+        
+    # go through while loop until hits audio plus the length of the longest sample is less than the desired length
+    while len(current_audio_file_hits) + train_list_maxlength  <= current_audio_file_samples:
+        
+        # Create random hit sample
+        random_sample = random.choice(train_list)
+        random_sample = [i[0] for i in random_sample]
+        
+        # select length of this section
+        empty_section_seconds = random.randint(min_empty_section_seconds * 100, max_empty_section_seconds * 100) / 100
+        empty_section_samples = [0] * int(empty_section_seconds * 44100)
     
-    # end point
-    #hits_section_end = background_section_start + background_section_samples 
-    current_audio_file_hits.extend(random_sample + empty_section_samples)
-    #background_section_start = background_section_end + 1
-
-# Trim to appropriate length
-current_audio_file_hits = current_audio_file_hits[0:current_audio_file_samples]
-
-# Print hits (drums)
-sound_output=wave.open(("audio_files_split/audio_file_hits_" + audio_file_number_text + ".wav"),'w')
-sound_output.setparams((1, 2, 44100, 0, 'NONE', 'not compressed')) # was 1,2... but used get_params for this file
-
-g = (array(current_audio_file_hits))
-g = g.astype('int16')
-g = g.reshape(current_audio_file_samples)#100000)
+        ## start point of background platter to choose from
+        #background_platter_start = random.randint(0, len(background_train_full) - background_section_samples)
+        ## end point of background platter to choose from
+        #background_platter_end = background_platter_start + background_section_samples
+        
+        # end point
+        #hits_section_end = background_section_start + background_section_samples 
+        current_audio_file_hits.extend(random_sample + empty_section_samples)
+        #background_section_start = background_section_end + 1
     
-for i in range(0, len(g)):
-        value = g[i]
-        packed_value = struct.pack('h', value)
-        sound_output.writeframes(packed_value)
-sound_output.close()
-
-# Create mixture
-h = [f[i] + g[i] for i in range(current_audio_file_samples)] 
-
-# Print mixture
-sound_output=wave.open(("audio_files_split/audio_file_mixture_" + audio_file_number_text + ".wav"),'w')
-sound_output.setparams((1, 2, 44100, 0, 'NONE', 'not compressed')) # was 1,2... but used get_params for this file
-
-for i in range(0, len(h)):
-        value = h[i]
-        packed_value = struct.pack('h', value)
-        sound_output.writeframes(packed_value)
-sound_output.close()
-
-
-
+    # Trim to appropriate length
+    current_audio_file_hits = current_audio_file_hits[0:current_audio_file_samples]
+    
+    # Print hits (drums)
+    sound_output=wave.open(("audio_files_split/audio_file_hits_" + audio_file_number_text + ".wav"),'w')
+    sound_output.setparams((1, 2, 44100, 0, 'NONE', 'not compressed')) # was 1,2... but used get_params for this file
+    
+    g = (array(current_audio_file_hits))
+    g = g.astype('int16')
+    g = g.reshape(current_audio_file_samples)#100000)
+        
+    for i in range(0, len(g)):
+            value = g[i]
+            packed_value = struct.pack('h', value)
+            sound_output.writeframes(packed_value)
+    sound_output.close()
+    
+    # Create mixture
+    h = [f[i] + g[i] for i in range(current_audio_file_samples)] 
+    
+    # Print mixture
+    sound_output=wave.open(("audio_files_split/audio_file_mixture_" + audio_file_number_text + ".wav"),'w')
+    sound_output.setparams((1, 2, 44100, 0, 'NONE', 'not compressed')) # was 1,2... but used get_params for this file
+    
+    for i in range(0, len(h)):
+            value = h[i]
+            packed_value = struct.pack('h', value)
+            sound_output.writeframes(packed_value)
+    sound_output.close()
+    
+# End loop    
 
 
 
