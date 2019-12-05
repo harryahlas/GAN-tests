@@ -213,22 +213,28 @@ current_audio_file_hits = current_audio_file_hits[0:current_audio_file_samples]
 sound_output=wave.open(("audio_files_split/audio_file_hits_" + audio_file_number_text + ".wav"),'w')
 sound_output.setparams((1, 2, 44100, 0, 'NONE', 'not compressed')) # was 1,2... but used get_params for this file
 
-f = (array(current_audio_file_hits))
-f = f.astype('int16')
-f = f.reshape(current_audio_file_samples)#100000)
+g = (array(current_audio_file_hits))
+g = g.astype('int16')
+g = g.reshape(current_audio_file_samples)#100000)
     
-for i in range(0, len(f)):
-        value = f[i]
+for i in range(0, len(g)):
+        value = g[i]
         packed_value = struct.pack('h', value)
         sound_output.writeframes(packed_value)
 sound_output.close()
 
-# Next - combine files to 3rd output
+# Create mixture
+h = [f[i] + g[i] for i in range(current_audio_file_samples)] 
 
+# Print mixture
+sound_output=wave.open(("audio_files_split/audio_file_mixture_" + audio_file_number_text + ".wav"),'w')
+sound_output.setparams((1, 2, 44100, 0, 'NONE', 'not compressed')) # was 1,2... but used get_params for this file
 
-
-
-
+for i in range(0, len(h)):
+        value = h[i]
+        packed_value = struct.pack('h', value)
+        sound_output.writeframes(packed_value)
+sound_output.close()
 
 
 
