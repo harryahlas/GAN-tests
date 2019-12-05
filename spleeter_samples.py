@@ -186,7 +186,7 @@ empty_section_samples = [0] * int(empty_section_seconds * 44100)
 current_audio_file_hits.extend(empty_section_samples)
     
 # go through while loop until hits audio plus the length of the longest sample is less than the desired length
-while len(current_audio_file_hits + train_list_maxlength ) <= current_audio_file_samples:
+while len(current_audio_file_hits) + train_list_maxlength  <= current_audio_file_samples:
     
     # Create random hit sample
     random_sample = random.choice(train_list)
@@ -201,12 +201,12 @@ while len(current_audio_file_hits + train_list_maxlength ) <= current_audio_file
     #background_platter_end = background_platter_start + background_section_samples
     
     # end point
-    hits_section_end = background_section_start + background_section_samples 
+    #hits_section_end = background_section_start + background_section_samples 
     current_audio_file_hits.extend(random_sample + empty_section_samples)
     #background_section_start = background_section_end + 1
 
 # Trim to appropriate length
-current_audio_file_background = current_audio_file_background[0:current_audio_file_samples]
+current_audio_file_hits = current_audio_file_hits[0:current_audio_file_samples]
 
 
     
