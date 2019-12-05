@@ -54,6 +54,7 @@ Test scripts for GAN models
 			* START HERE: Next - combine files to 3rd output combine files (226)
 			* Combine
 			* save as sample000n_mixture.wav
+		* create multiple samples
 	* create train csv
 	* run train session
 	* evaluate results
