@@ -190,6 +190,7 @@ while len(current_audio_file_hits) + train_list_maxlength  <= current_audio_file
     
     # Create random hit sample
     random_sample = random.choice(train_list)
+    random_sample = [i[0] for i in random_sample]
     
     # select length of this section
     empty_section_seconds = random.randint(min_empty_section_seconds * 100, max_empty_section_seconds * 100) / 100
@@ -211,14 +212,19 @@ current_audio_file_hits = current_audio_file_hits[0:current_audio_file_samples]
 
 sound_output=wave.open(("audio_files_split/audio_file_hits_" + audio_file_number_text + ".wav"),'w')
 sound_output.setparams((1, 2, 44100, 0, 'NONE', 'not compressed')) # was 1,2... but used get_params for this file
-f = (array(current_audio_file_background))
+#f = (array(current_audio_file_background))
+#f = f.astype('int16')
+#f = f.reshape(current_audio_file_samples)#100000)
+###NEED TO GET G TO LOOK LIKE F <<<------------------------------------
+#current_audio_file_hitsx = [(x,) for x in current_audio_file_hits]    
+#current_audio_file_hitsx = current_audio_file_hitsx.astype(int)
+
+f = (array(current_audio_file_hits))
+
+#g = array(g)
+#g = g.astype(str).astype(int)
 f = f.astype('int16')
 f = f.reshape(current_audio_file_samples)#100000)
-###NEED TO GET G TO LOOK LIKE F <<<------------------------------------
-g = [(x,) for x in current_audio_file_hits]    
-g = array(g)
-g = g.astype('int16')
-g = g.reshape(current_audio_file_samples)#100000)
     
 for i in range(0, len(f)):
         value = f[i]
