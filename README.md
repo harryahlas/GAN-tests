@@ -25,6 +25,7 @@ Test scripts for GAN models
 	##**Next steps: **spleeter
 	* look at https://github.com/deezer/spleeter/blob/master/configs/musdb_train.csv
 	* use C:\Development\Python\encoder_decoder\conv_decoder_with_real_samples.py as template
+		* C:\Development\github\GAN-tests\spleeter_samples.py
 	* split files in that order, create blanks for other categories
 		* get list of train, test, and validation samples
 		* COMPLETE - tom samples
