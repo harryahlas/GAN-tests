@@ -55,7 +55,8 @@ Test scripts for GAN models
 			* COMPLETE - save as sample000n_mixture.wav
 		* COMPLETE - create multiple samples using loop
 	* create train csv
-	* run train session
+		* locate and copy version from spleeter
+	* run train session (refer to spleeter_start.txt)
 	* evaluate results
 	* see documentation for training	
 	* **Next steps: ** UPDATE V2 TO INCLUDE CODE FROM OTHER GIT, FIGURE OUT ERROR
