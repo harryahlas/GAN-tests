@@ -214,6 +214,9 @@ for loop_number in range(1, number_of_audio_files):
     # Trim to appropriate length
     current_audio_file_hits = current_audio_file_hits[0:current_audio_file_samples]
     
+    ## ADD PIECE TO ADD 0s TO MAKE LENGTH CORRECT
+    #IF G < current_audio_file_samples THEN ADD 0s
+    
     # Print hits (drums)
     sound_output=wave.open(("audio_files_split/audio_file_hits_" + audio_file_number_text + ".wav"),'w')
     sound_output.setparams((1, 2, 44100, 0, 'NONE', 'not compressed')) # was 1,2... but used get_params for this file
