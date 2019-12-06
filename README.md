@@ -23,11 +23,11 @@ Test scripts for GAN models
 	* COMPLETE -  Look at spleeter...reg doesnt work, try jupyter notebook on colab
 	##**Next steps: **musdb
 	##**Next steps: **spleeter
-	* look at https://github.com/deezer/spleeter/blob/master/configs/musdb_train.csv
-	* use C:\Development\Python\encoder_decoder\conv_decoder_with_real_samples.py as template
+	* COMPLETE - look at https://github.com/deezer/spleeter/blob/master/configs/musdb_train.csv
+	* COMPLETE - use C:\Development\Python\encoder_decoder\conv_decoder_with_real_samples.py as template
 		* C:\Development\github\GAN-tests\spleeter_samples.py
-	* split files in that order, create blanks for other categories
-		* get list of train, test, and validation samples
+	* COMPLETE - split files in that order, create blanks for other categories
+		* COMPLETE - get list of train, test, and validation samples
 		* COMPLETE - tom samples
 			* COMPLETE - C:\Development\Python\encoder_decoder\encoder_decoder_sounds\Audio\drum_sample-14.wav (01 through 32)
 			test is through 9, train is through 7
@@ -54,11 +54,11 @@ Test scripts for GAN models
 			* COMPLETE - Combine
 			* COMPLETE - save as sample000n_mixture.wav
 		* COMPLETE - create multiple samples using loop
-	* create train csv
+	* COMPLETE - create train csv
 		* COMPLETE - Get lengths of songs
 		* COMPLETE - locate and copy version from spleeter
 		* COMPLETE - add names
-		* Update locations
+		* COMPLETE - Update locations
 	* Open train session in spleeter
 	* run train session (refer to spleeter_start.txt)
 	* evaluate results
