@@ -53,7 +53,7 @@ Test scripts for GAN models
 				* COMPLETE -save as sample000n_drums.wav
 			* COMPLETE - Combine
 			* COMPLETE - save as sample000n_mixture.wav
-		* create multiple samples using loop
+		* COMPLETE - create multiple samples using loop
 	* create train csv
 	* run train session
 	* evaluate results
