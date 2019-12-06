@@ -60,6 +60,10 @@ Test scripts for GAN models
 		* COMPLETE - add names
 		* COMPLETE - Update locations
 	* Open train session in spleeter
+		* Research this error: <code>(spleeter-cpu) C:\Development\github\spleeter>spleeter train -p C:/Development/github/GAN-tests/spleeter_configs/musdb_config.json -d
+usage: spleeter train [-h] [-a AUDIO_ADAPTER] [-p PARAMS_FILENAME] [--verbose]
+                      -d AUDIO_PATH
+spleeter train: error: argument -d/--data: expected one argument</code>
 	* run train session (refer to spleeter_start.txt)
 	* evaluate results
 	* see documentation for training	
