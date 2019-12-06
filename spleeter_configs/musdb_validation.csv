@@ -1,6 +1,6 @@
 mix_path,vocals_path,drums_path,bass_path,other_path,duration
-audio_files_split/audio_file_mixture_0010.wav,,audio_files_split/audio_file_hits_0010.wav,,audio_files_split/audio_file_background_0010.wav,,25
-audio_files_split/audio_file_mixture_0011.wav,,audio_files_split/audio_file_hits_0011.wav,,audio_files_split/audio_file_background_0011.wav,,11
-audio_files_split/audio_file_mixture_0013.wav,,audio_files_split/audio_file_hits_0013.wav,,audio_files_split/audio_file_background_0013.wav,,16
-audio_files_split/audio_file_mixture_0014.wav,,audio_files_split/audio_file_hits_0014.wav,,audio_files_split/audio_file_background_0014.wav,,22
-audio_files_split/audio_file_mixture_0015.wav,,audio_files_split/audio_file_hits_0015.wav,,audio_files_split/audio_file_background_0015.wav,,24
+C:/Development/github/GAN-tests/audio_files_split/audio_file_mixture_0010.wav,,C:/Development/github/GAN-tests/audio_files_split/audio_file_hits_0010.wav,,C:/Development/github/GAN-tests/audio_files_split/audio_file_background_0010.wav,,25
+C:/Development/github/GAN-tests/audio_files_split/audio_file_mixture_0011.wav,,C:/Development/github/GAN-tests/audio_files_split/audio_file_hits_0011.wav,,C:/Development/github/GAN-tests/audio_files_split/audio_file_background_0011.wav,,11
+C:/Development/github/GAN-tests/audio_files_split/audio_file_mixture_0013.wav,,C:/Development/github/GAN-tests/audio_files_split/audio_file_hits_0013.wav,,C:/Development/github/GAN-tests/audio_files_split/audio_file_background_0013.wav,,16
+C:/Development/github/GAN-tests/audio_files_split/audio_file_mixture_0014.wav,,C:/Development/github/GAN-tests/audio_files_split/audio_file_hits_0014.wav,,C:/Development/github/GAN-tests/audio_files_split/audio_file_background_0014.wav,,22
+C:/Development/github/GAN-tests/audio_files_split/audio_file_mixture_0015.wav,,C:/Development/github/GAN-tests/audio_files_split/audio_file_hits_0015.wav,,C:/Development/github/GAN-tests/audio_files_split/audio_file_background_0015.wav,,24
