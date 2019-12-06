@@ -107,11 +107,11 @@ min_empty_section_seconds = 0
 max_empty_section_seconds = 10
 
 
-number_of_audio_files = 5
+number_of_audio_files = 7
 
 # Start loop
 
-for loop_number in range(1, number_of_audio_files):
+for loop_number in range(4, number_of_audio_files):
     print(loop_number)
     audio_file_number = loop_number
     audio_file_number_text = "{:04d}".format(audio_file_number)
@@ -221,8 +221,13 @@ for loop_number in range(1, number_of_audio_files):
     sound_output=wave.open(("audio_files_split/audio_file_hits_" + audio_file_number_text + ".wav"),'w')
     sound_output.setparams((1, 2, 44100, 0, 'NONE', 'not compressed')) # was 1,2... but used get_params for this file
     
-    g = (array(current_audio_file_hits))
-    g = g.astype('int16')
+    g_prepad = (array(current_audio_file_hits))
+    g_prepad = g_prepad.astype('int16')
+
+    # pad
+    g = np.zeros(f.shape, dtype = 'int16')
+    g[:len(g_prepad)] = g_prepad
+
     g = g.reshape(current_audio_file_samples)#100000)
         
     for i in range(0, len(g)):
