@@ -17,7 +17,18 @@ spleeter separate -i spleeter/audio_example.mp3 -p spleeter:2stems -o output
 
 conda env create -f spleeter/conda/spleeter-cpu.yamlspleeter separate -i 156e-wVoxedit1.wav -p spleeter:2stems -o output
 
+#12/6/2019
+cd C:\Development\github\spleeter
+activate spleeter-cpu
+
 ### demucs start
 pip install musdb
 cd C:\Development\github\demucs
 conda env update -f environment-cpu.yml
+
+2)
+comment out pip installs in environment-cpu.yml
+cd C:\Development\github\demucs
+conda env update -f environment-cpu.yml
+
+xtra --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host pypi.org
