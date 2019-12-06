@@ -20,6 +20,8 @@ conda env create -f spleeter/conda/spleeter-cpu.yamlspleeter separate -i 156e-wV
 #12/6/2019
 cd C:\Development\github\spleeter
 activate spleeter-cpu
+ERROR HERE: spleeter train -p C:/Development/github/GAN-tests/spleeter_configs/musdb_config.json -d C:/Development/github/GAN-tests/audio_files_split
+ERROR HERE: spleeter train -p C:/Development/github/GAN-tests/spleeter_configs/musdb_config.json -d 
 
 ### demucs start
 pip install musdb
