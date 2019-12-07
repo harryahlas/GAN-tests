@@ -72,7 +72,7 @@ INFO:spleeter:Loading audio b'C:/Development/github/GAN-tests/audio_files_split\
 	* run train session (refer to spleeter_start.txt)
 	* evaluate results
 		* Create new files for evaluation using training samples
-		* Run on new one
+		* Run on new one - STAR HERE - LOCATE OUTPUT, SEE IF 2 CHANNEL OUTPUT WORKED
 		* Repeat above for testing samples
 	* see documentation for training	
 	* **Next steps: ** UPDATE V2 TO INCLUDE CODE FROM OTHER GIT, FIGURE OUT ERROR
