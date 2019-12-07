@@ -60,12 +60,19 @@ Test scripts for GAN models
 		* COMPLETE - add names
 		* COMPLETE - Update locations
 	* Open train session in spleeter
-		* Research this error: <code>(spleeter-cpu) C:\Development\github\spleeter>spleeter train -p C:/Development/github/GAN-tests/spleeter_configs/musdb_config.json -d
+		* COMPLETE - Research this error: <code>(spleeter-cpu) C:\Development\github\spleeter>spleeter train -p C:/Development/github/GAN-tests/spleeter_configs/musdb_config.json -d
 usage: spleeter train [-h] [-a AUDIO_ADAPTER] [-p PARAMS_FILENAME] [--verbose]
                       -d AUDIO_PATH
 spleeter train: error: argument -d/--data: expected one argument</code>
+		* Research error: <code>INFO:spleeter:Loading audio b'C:/Development/github/GAN-tests/audio_files_split\\train/Invisible Familiars - Disturbing Wildlife/mixture.wav' from 99.2498865 to 119.2498865
+WARNING:spleeter:ffprobe error (see stderr output for detail)
+INFO:spleeter:Loading audio b'C:/Development/github/GAN-tests/audio_files_split\\train/Music Delta - Hendrix/mixture.wav' from 0.0 to 20.0
+WARNING:spleeter:ffprobe error (see stderr output for detail)
+INFO:spleeter:Loading audio b'C:/Development/github/GAN-tests/audio_files_split\\train/Johnny Lokke - Whisper To A Scream/mixture.wav' from 117.6633105 to 137.6633105</code>
 	* run train session (refer to spleeter_start.txt)
 	* evaluate results
+		* Create new files for evaluation
+		* Run on new one
 	* see documentation for training	
 	* **Next steps: ** UPDATE V2 TO INCLUDE CODE FROM OTHER GIT, FIGURE OUT ERROR
 		* COMPLETE - SEE IF SWITHCING CONV1D2 FROM 64 TO SOMETHING ELSE CHANGES THE GAPS!!
