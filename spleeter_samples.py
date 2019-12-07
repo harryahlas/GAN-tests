@@ -107,11 +107,11 @@ min_empty_section_seconds = 0
 max_empty_section_seconds = 10
 
 
-number_of_audio_files = 16
+number_of_audio_files = 18
 
 # Start loop
 
-for loop_number in range(1, number_of_audio_files):
+for loop_number in range(16, number_of_audio_files):
     print(loop_number)
     audio_file_number = loop_number
     audio_file_number_text = "{:04d}".format(audio_file_number)
