@@ -11,17 +11,24 @@ conda env create -f C:\Development\github\spleeter\conda\spleeter-cpu.yaml
 (older conda)
 activate <envname>
 
-
+cd C:\Development\github\spleeter
 conda activate spleeter-cpu
 spleeter separate -i spleeter/audio_example.mp3 -p spleeter:2stems -o output
 
-conda env create -f spleeter/conda/spleeter-cpu.yamlspleeter separate -i 156e-wVoxedit1.wav -p spleeter:2stems -o output
+# split file
+cd C:\Development\github\spleeter
+activate spleeter-cpu
+spleeter separate -i spleeter/audio_file_mixture_0017.wav -p 
+
+cd C:\Development\github\spleeter
+conda env create -f spleeter/conda/spleeter-cpu.yaml
+spleeter separate -i 156e-wVoxedit1.wav -p spleeter:2stems -o output
+spleeter separate -i 156e-wVoxedit1.wav -p spleeter:2stems -o output
 
 #12/6/2019
 cd C:\Development\github\spleeter
 activate spleeter-cpu
 ERROR HERE: spleeter train -p C:/Development/github/GAN-tests/spleeter_configs/musdb_config.json -d C:/Development/github/GAN-tests/audio_files_split
-ERROR HERE: spleeter train -p C:/Development/github/GAN-tests/spleeter_configs/musdb_config.json -d 
 
 ### demucs start
 pip install musdb
