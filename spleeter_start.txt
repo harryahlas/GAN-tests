@@ -30,6 +30,10 @@ cd C:\Development\github\spleeter
 activate spleeter-cpu
 ERROR HERE: spleeter train -p C:/Development/github/GAN-tests/spleeter_configs/musdb_config.json -d C:/Development/github/GAN-tests/audio_files_split
 
+2/20/2021 - trying this after updating musdb_train.csv and musdb_validate.csv:
+spleeter train -p C:/Development/github/GAN-tests/spleeter_configs/musdb_config.json -d C:/Development/github/GAN-tests/audio_files_split
+
+
 ### demucs start
 pip install musdb
 cd C:\Development\github\demucs
