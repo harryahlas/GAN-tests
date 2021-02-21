@@ -93,7 +93,28 @@ output_array.shape</code>
 			* Change Adam to .00001 and .8?
 		* Also need to reuse periodic image generator, only for periodic audio generation
 
-	
+* **Demucs**
+	* see *stempegscripts/README.md* for info including stem building and running
+	* In short, the process works on both pc and colab. However, FB recommends not even trying to train on a different data set.  When I tried to train using *demucs _attempt.ipynb* I got this error at the end: 
+		* <code>Experiment musdb=demucs batch_size=1
+Number of training samples adjusted to 451924
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/local/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/content/demucs/demucs/__main__.py", line 271, in <module>
+    main()
+  File "/content/demucs/demucs/__main__.py", line 210, in main
+    world_size=args.world_size)
+  File "/content/demucs/demucs/train.py", line 38, in train_model
+    loader = DataLoader(dataset, batch_size=batch_size, num_workers=workers, shuffle=True)
+  File "/usr/local/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 262, in __init__
+    sampler = RandomSampler(dataset, generator=generator)  # type: ignore
+  File "/usr/local/lib/python3.7/site-packages/torch/utils/data/sampler.py", line 104, in __init__
+    "value, but got num_samples={}".format(self.num_samples))
+ValueError: num_samples should be a positive integer value, but got num_samples=0</code>
+
 * Potential steps:
 	* Run 2d image GAN successfully
 	* Understand wtf is going on there
