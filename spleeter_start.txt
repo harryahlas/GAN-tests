@@ -31,7 +31,7 @@ activate spleeter-cpu
 ERROR HERE: spleeter train -p C:/Development/github/GAN-tests/spleeter_configs/musdb_config.json -d C:/Development/github/GAN-tests/audio_files_split
 
 2/20/2021 - trying this after updating musdb_train.csv and musdb_validate.csv:
-spleeter train -p D:/Development/github/GAN-tests/spleeter_configs/musdb_config.json -d D:/Development/github/GAN-tests/audio_files_split
+ERROR HERE: spleeter train -p D:/Development/github/GAN-tests/spleeter_configs/musdb_config.json -d D:/Development/github/GAN-tests/audio_files_split
 
 
 ### demucs start
