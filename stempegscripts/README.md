@@ -1,6 +1,7 @@
 # Build Multi Channel mp4 Files from wav Stems
 
 *stempeg_build_mp4s.ipynb* is built to run on Colab. It takes as input wav files built  with *demucs_samples.R*. These wav files were run locally and then uploaded to Drive. A better process would be to build the files in Colab entirely.
+*demucs__attempt.ipynb* in main folder works except the training has major issues.
 
 
 ### Test writing own data to mp4 with multiple channels
