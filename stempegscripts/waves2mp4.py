@@ -7,9 +7,19 @@ import stempeg
 # 3 - The rest of the accompaniment,
 # 4 - The vocals.
 
-stems_folder = "D:/Development/github/GAN-tests/audio_files_split/audio_files_001"
+# example
 S, rate = stempeg.read_stems(stempeg.example_stem_path())
+stempeg.write_stems(
+ "output.mp4",
+ S,
+ sample_rate=rate,
+ writer=stempeg.StreamsWriter())
 
+S, rate = stempeg.read_stems("C:/Users/hahla/Downloads/output.mp4", stem_id=[0])
+
+
+
+stems_folder = "D:/Development/github/GAN-tests/audio_files_split/audio_files_001"
 
 filename_mix = "D:/Development/github/GAN-tests/audio_files_split/audio_file_mixture_0002.wav"
 filename_drums = "D:/Development/github/GAN-tests/audio_files_split/audio_file_hits_0002.wav"
@@ -61,10 +71,10 @@ stempeg.write_stems(
  ("output.mp4"),
  stems,
  sample_rate=rate,
- writer=stempeg.StreamsWriter(
+ writer=stempeg.StreamsWriter())
         #multiprocess=True,
-        output_sample_rate=44100#,
-       # stem_names=["mix", "drums", "bass", "other", "vocals"]
+        #output_sample_rate=44100#,
+        stem_names=["mix", "drums", "bass", "other", "vocals"]
     )
 )    
 
