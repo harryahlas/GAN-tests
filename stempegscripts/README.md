@@ -9,7 +9,7 @@
 [x] Run code
 [x] Copy export code over
 [x] Run code
-[ ] Save code locally in new demucs folder
+[x] Save code locally in new demucs folder
 
 ### Write all data to multiple channels
 [x] figure out if files need to be in separate folders
@@ -17,11 +17,11 @@
 [x] upload train files
 [x] upload test files
 [x] figure out how to import to colab
-[ ] figure out how to export to drive
+[x] figure out how to export to drive
 [x] locally, figure out how to make a loop
-[ ] Run loop
-[ ] save files
-[ ] rename stempeg to stempeg_build_mp4s and move to Development/demucs
+[x] Run loop
+[x] save files
+[x] rename stempeg to stempeg_build_mp4s and move to Development/demucs
 
 ### Optional Improvements
 [ ] A better process would be to build the files in Colab entirely. Start by uploading the raw data and then running *demucs_samples.R* if possible in Colab.

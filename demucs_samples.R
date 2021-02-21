@@ -90,6 +90,7 @@ write.csv(musdb_train, "musdb_train.csv")
 system("python D:/Development/github/GAN-tests/stempegscripts/wave2audio.py")
 
 
+repl_python()
 
 ## old
 system("C:/Users/hahla/miniconda3/Scripts/activate.bat")
