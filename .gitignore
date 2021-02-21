@@ -5,3 +5,4 @@ audio_files_split/audio_file_hits_0001.wav
 audio_files_split/audio_file_hits_xxx0001.wav
 audio_files_split/audio_file_mixture_0001.wav
 *.wav
+.Rproj.user
