@@ -1,6 +1,8 @@
 # GAN-tests
 Test scripts for GAN models
 
+* *spleeter_info.md* has functioning split, though results are not impressive after a short train.  Need to do a better train.
+	* [ ] Try more samples
 * *mnistgan_test.ipynb* Implementation of Deep Convolutional Generative Adversarial Network.
 	* Based on [https://github.com/eriklindernoren/Keras-GAN/blob/master/dcgan/dcgan.py](https://github.com/eriklindernoren/Keras-GAN/blob/master/dcgan/dcgan.py)
 	* Process:
