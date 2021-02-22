@@ -1,5 +1,9 @@
 # Successful Spleeter Train
-With not so great results but it functions.
+Was working with not so great results but it did function.  After adding additional train/test data something is breaking.
+[ ] need to fix above. My guess is it is one of these:
+   durations are incorrect somewhere
+   some other error on the csv files
+   the wrong wav files are there. not sure how to solve that without reuploading everything.
 
 *spleeter.ipynb* works.  These are the steps as I recall.  It started with demucs but moved to spleeter after I was unable to train demucs on new data.
 1. Create samples using *spleeter_samples.py*. Note there is a better file called *spleeter_more_samples.py*
