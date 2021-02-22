@@ -1,6 +1,6 @@
 {
-    "train_csv": "configs/musdb_train.csv",
-    "validation_csv": "configs/musdb_validation.csv",
+    "train_csv": "musdb_train.csv",
+    "validation_csv": "musdb_validation.csv",
     "model_dir": "musdb_model",
     "mix_name": "mix",
     "instrument_list": ["drums","other"],
