@@ -10,6 +10,7 @@ With not so great results but it functions.
    1. musdb_validation.csv
 1. Save files above to *gdrive/MyDrive/Development/spleeter* 
 1. Run *spleeter.ipynb*
+1. **Next step:** run this with *spleeter_more_samples.py*
 
 ################# Original notes below
 
