@@ -2,7 +2,7 @@
 With not so great results but it functions.
 
 *spleeter.ipynb* works.  These are the steps as I recall.  It started with demucs but moved to spleeter after I was unable to train demucs on new data.
-1. Create samples using 
+1. Create samples using *spleeter_samples.py*. Note there is a better file called *spleeter_more_samples.py*
 1. Save audio samples to train and/or test folders on colab in *gdrive/MyDrive/Development/spleeter*.  I don't think it matters which folder you save to. 
 1. Update *spleeter_configs/colab* folder.  The csvs should have the locations as they would appear on colab/drive.
    1. musdb_config.json
